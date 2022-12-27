@@ -1,3 +1,12 @@
 
+Input:
 Daily blast website
 https://webapps.mines.edu/DailyBlast
+
+API:
+
+Timer:
+
+Processor:
+
+Output:
