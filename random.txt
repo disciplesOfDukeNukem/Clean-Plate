@@ -8,5 +8,10 @@ API:
 Timer:
 
 Processor:
+Chat JPT
 
 Output:
+Text message and Google calender
+https://www.twilio.com/en-us/messaging/channels/sms
+
+
