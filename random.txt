@@ -4,14 +4,17 @@ Daily blast website
 https://webapps.mines.edu/DailyBlast
 
 API:
+ScaleSerp
+May need to use beautiful soup to process html into chatgpt input
 
 Timer:
 
 Processor:
-Chat JPT
+ChatGPT
 
 Output:
+
+Output:
+SMS via Twilio
 Text message and Google calender
 https://www.twilio.com/en-us/messaging/channels/sms
-
-
