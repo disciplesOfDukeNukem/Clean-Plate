@@ -4,6 +4,8 @@ Daily blast website
 https://webapps.mines.edu/DailyBlast
 
 API:
+ScaleSerp
+May need to use beautiful soup to process html into chatgpt input
 
 Timer:
 
