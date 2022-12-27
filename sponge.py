@@ -16,5 +16,5 @@ api_result = requests.get('https://webapps.mines.edu/DailyBlast/Home/PerformSear
 print(api_result.content)
 
 #outputting to an html file
-with open("rawBlast", 'w') as rawBlast:
+with open("rawBlast.txt", 'w') as rawBlast:
     rawBlast.write(api_result.content.decode('utf-8'))
