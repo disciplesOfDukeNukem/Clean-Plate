@@ -11,5 +11,5 @@ for number in numbers:
   message = client.messages.create(
       to=number,
       from_="+13148873334",
-      body="You Fucking Slut This IS TWILIO talking to you!!!!")
+      body="Hurry the fuck up")
   print(message.sid)

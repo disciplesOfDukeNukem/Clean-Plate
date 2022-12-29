@@ -2,8 +2,11 @@
 
 from bs4 import BeautifulSoup
 
+#will be rawBlast, using sample for testing purposes
+openpath = "sampleDailyBlast-11-30-22.txt"
+
 #opening the rawBlast
-with open("rawBlast.txt", 'r') as f:
+with open(openpath, 'r') as f:
     #saves it as raw_blast
     raw_blast = f.read()
 
@@ -16,8 +19,11 @@ cookedSoup = ingredients[1]
 # Split the text into a list of words
 words = cookedSoup.split()
 # Get the first 2000 words
-halfSoup = words[:2048]
+halfSoup = words[:2000]
 # Join the first 2000 words back into a single string
 cookedSoup = ' '.join(halfSoup)
 
 print(cookedSoup)
+
+with open("cleanBlast.txt", 'w') as rawBlast:
+    rawBlast.write(cookedSoup)
