@@ -2,11 +2,8 @@
 
 from bs4 import BeautifulSoup
 
-#will be rawBlast, using sample for testing purposes
-openpath = "sampleDailyBlast-11-30-22.txt"
-
 #opening the rawBlast
-with open(openpath, 'r') as f:
+with open("rawBlast.txt", 'r') as f:
     #saves it as raw_blast
     raw_blast = f.read()
 
