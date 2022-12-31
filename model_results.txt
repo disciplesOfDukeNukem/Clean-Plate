@@ -1,0 +1,73 @@
+Prompt: 
+Name all of the events with free food, drinks, breakfast, lunch, or dinner in the following email, as well as when and where they are. Format it in the form of [Event, time, date, location, type of meal]
+
+Davinci: 
+
+[Free Coffee in Appreciation of your Service, November 11th, Location TBD, Coffee
+
+Good Vibe Food Drive Final Days!, Anytime, Location: Mines Market or the Periodic table, Non-perishable food
+
+Mindful Monday Meditation Nov 14: Let's Go To The Beach!, 3pm, November 14th, Arthur Lake's Library Boettcher Room, No meal
+
+Hybrid - Shifts in Energy Geopolitics – Clean Energy, today, Location TBD, No meal
+
+Hydration Station Tailgate, Anytime, Q Lot, No meal]
+
+
+
+Curie:
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+The Mines Art Club meets every Tuesday from 3-4pm in the Arthur Lake's Library.
+Mines Art Club
+
+
+
+Babbage:
+Mines Student Advisory Committee (MSAC)
+The MSAC is a student-led organization that provides a forum for students to discuss issues of interest to Mines students.
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130.    
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130.    
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130.    
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130.    
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130.    
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130.    
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130.    
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130.    
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130.    
+MSAC will meet on Tuesday, November 17, at 6:30pm in Coorstek 130. 
+
+Ada:
+Mines Undergraduate Research Scholar Distinction at Graduation        
+Are you a graduating undergraduate student researcher? Nominate them for Undergraduate Research Scholar Distinction!
+Mines Undergraduate Research Scholar Distinction at Graduation        
+Do you know a graduating undergraduate student researcher? Nominate them for Undergraduate Research Scholar Distinction!
+Mines Undergraduate Research Scholar Distinction at Graduation        
+Do you know a graduating undergraduate student researcher? Nominate them for Undergraduate Research Scholar Distinction!
+Mines Undergraduate Research Scholar Distinction at Graduation        
+Do you know a graduating undergraduate student researcher? Nominate them for Undergraduate Research Scholar Distinction!
+Mines Undergraduate Research Scholar Distinction at Graduation        
+Do you know a graduating undergraduate student researcher? Nominate them for Undergraduate Research Scholar Distinction!
+Mines Undergraduate Research Scholar Distinction at Graduation        
+Do you know a graduating undergraduate student researcher? Nominate them for Undergraduate Research Scholar Distinction!
+Mines Undergraduate Research Scholar Distinction at Graduation        
+Do you know a graduating undergraduate student researcher? Nominate them for Undergraduate Research Scholar Distinction!
+Mines Undergraduate Research Scholar Distinction at Graduation        
+Do you know a graduating undergraduate student researcher? Nominate them for

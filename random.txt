@@ -11,6 +11,7 @@ Timer:
 
 Processor:
 ChatGPT
+    Prompt: "Are there any events with free food, breakfast, lunch, dinner, or drinks in the following email? If so, when and where are they?"
 
 Output:
 
@@ -18,3 +19,12 @@ Output:
 SMS via Twilio
 Text message and Google calender
 https://www.twilio.com/en-us/messaging/channels/sms
+
+
+
+Events:
+Girls Lead the Way conference
+International Energy Workshop 6/13-15/23
+"Me and White Supremacy," book club
+Blood Drive
+"Me and White Supremacy," book club
