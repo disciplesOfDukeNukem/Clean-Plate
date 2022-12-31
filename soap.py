@@ -27,7 +27,10 @@ with open("rawLinks.csv", "w", encoding="utf-8") as l:
     writer.writerow(csv_headers)
     
     for atag in a_tags:
-        writer.writerow([atag.text, atag.get("href")])
+        link = atag.get("href")
+        text = atag.text
+        if link and text:
+            writer.writerow([text, link])
 
 rawSoup = soup.get_text()
 ingredients = rawSoup.split('Maximum number of entries to return. If blank, no limit on number:\n\n\n\n\n\n')
