@@ -1,6 +1,7 @@
 #This file will parse the rawBlast and return the text
 
 from bs4 import BeautifulSoup
+import csv
 
 #opening the rawBlast
 with open("rawBlast.txt", 'r', encoding="utf-8") as f:
@@ -16,13 +17,18 @@ links = soup.find_all('a')
 
 # loop through the links and print the text and href attributes
 
-with open("rawLinks.txt", "w", encoding="utf-8") as l:
-    writer = writer(l)
-    for link in links:
-        writer.writerow(link)
 
+a_tags = soup.find_all("a")
 
-"""
+with open("rawLinks.csv", "w", encoding="utf-8") as l:
+    writer = csv.writer(l)
+    
+    csv_headers = ["header", "link"]
+    writer.writerow(csv_headers)
+    
+    for atag in a_tags:
+        writer.writerow([atag.text, atag.get("href")])
+
 rawSoup = soup.get_text()
 ingredients = rawSoup.split('Maximum number of entries to return. If blank, no limit on number:\n\n\n\n\n\n')
 cookedSoup = ingredients[1]
@@ -37,4 +43,3 @@ print(cookedSoup)
 
 with open("cleanBlast.txt", 'w') as rawBlast:
     rawBlast.write(cookedSoup)
-"""

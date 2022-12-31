@@ -16,7 +16,7 @@ with open(read_path, "r", encoding="utf-8") as f:
 initialPrompt = "Name the first 8 events in the following email in an ordered list in the format of [event],[event],...: "
 final_prompt = initialPrompt + blastPrompt
 
-print(final_prompt)
+#print(final_prompt)
 
 
 response = openai.Completion.create(
