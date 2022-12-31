@@ -3,6 +3,8 @@
 
 import csv
 
+cleanLinks = []
+
 #reading in rawLinks and storing in dictionary link_dict
 with open("rawLinks.csv") as csv_file:
     reader = csv.reader(csv_file)
@@ -19,7 +21,14 @@ with open("sampleEvents.txt", "r", encoding = "utf-8") as e:
     for line in e:
         events.append(line.strip())
 
-print(events)
+#print(events)
 
+#checking each event
+for event in events:
+    print(link_dict[event])
+    if event in link_dict:
+        cleanLinks.append(link_dict[event])
+
+print(cleanLinks)
     
 
