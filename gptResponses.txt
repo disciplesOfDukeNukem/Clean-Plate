@@ -1,0 +1,26 @@
+Prompt:
+Name the first 8 events in the following email in an ordered list in the format of [event],[event],...: 
+
+ChatGPT:
+Campus Closure days at the Student Health Center
+Society of Women Engineers' Girls Lead the Way conference registration is open
+HR Office closed for renovations
+Nomination Committee for Senate Leadership
+41st edition of the International Energy Workshop
+"Me and White Supremacy" book club
+Blood Drive
+Electronic Access System (Blastercard) testing
+
+API:
+he Student Center Ballroom on Wednesday, December 7th at 7:00pm.Special Activities
+Here it is, your Mines Moment of ZenOn this second day of finals, we offer you a reminder to take a break and breathe. 
+From Every OrediggerTuesday, December 6, 2022
+Closures and OutagesCampus Living Office ClosedThe "CLO" will be closed on Friday, December 16
+MEP Closing at 5pm Thursday, 12/15/2022
+The Multicultural Engineering Program will be closing at 5pm on Thursday, 12/15/2022.
+Student Health Center closing at 2:30 on Wednesday
+The Student Health Center will be closing at 2:30 on Wednesday, December 14th.
+Dates and DeadlinesDo you LOVE Lego & Maps? Win a chance to create a lego map!Sketch your map with a paragraph on what it is and why you should win! Deadline: 1/13/2023
+Campus AnnouncementsCareer Center Changes - Happy Retirement Debbie BehnfieldWelcome new Career Center Associate Director Rebecca Martinez and Happy Retirement Debbie Behnfield!
+Faculty Resource: The Online Technical Communication Center
+Planning Spring classes? The OTCC has resources on many communications topics with explanatory videos, handouts & exercises.Only
