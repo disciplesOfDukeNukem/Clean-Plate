@@ -25,7 +25,6 @@ with open("sampleEvents.txt", "r", encoding = "utf-8") as e:
 
 #checking each event
 for event in events:
-    print(link_dict[event])
     if event in link_dict:
         cleanLinks.append(link_dict[event])
 

@@ -8,12 +8,12 @@ read_path = "cleanBlast.txt"
 
 blastPrompt = ""
 #reading in and setting the blastPrompt
-with open(read_path, "r", encoding="utf-8") as f:
+with open(read_path, "r") as f:
     # Read the contents of the file as a string
     blastPrompt = f.read()
 
 #initialPrompt = "Name all of the events with free food, drinks, breakfast, lunch, or dinner in the following email, as well as when and where they are.  "
-initialPrompt = "Name the first 8 events in the following email in an ordered list in the format of [event],[event],...: "
+initialPrompt = "Name the first 8 events in the following email: "
 final_prompt = initialPrompt + blastPrompt
 
 #print(final_prompt)
@@ -35,7 +35,7 @@ response = openai.Completion.create(
 
 event_string = response['choices'][0]['text']
 
-print(event_string)
+print("test" + event_string)
 
 #event_list = event_string.split("], [")
 #for event in event_list:
