@@ -32,8 +32,8 @@ def sponge():
         rawBlast.write(api_result.content.decode('utf-8'))
     soap()
 
-#refines the rawDawg html and scrapes the daily blast using chatGPT
-#to tug out the food events
+
+    #This file will parse the rawBlast and return the text
 def soap():
         
     #opening the rawBlast
