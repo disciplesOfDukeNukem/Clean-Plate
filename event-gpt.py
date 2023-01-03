@@ -9,7 +9,8 @@ openai.api_key = "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"
 scaleSerpKey = "54737D4576E3465B9A02285845AD6587"
 
 links = []
-prompt = "Name the type of food, drink, breakfast, lunch or dinner in the following event, as well as where and when it is. Use this format [event name, time, location, type of food/drink] "
+results = []
+prompt = "Name the type of food, drink, breakfast, lunch or dinner in the following event, as well as where and when it is. Use this format [event name, time and date, location, type of food/drink] "
 
 readpath = "sampleCleanLinks.csv"
 
@@ -34,10 +35,7 @@ for link in links:
 #parse
     soup = BeautifulSoup(api_result.content, 'html.parser')
     rawSoup = soup.get_text()
-    ingredients = rawSoup.split('Campus Announcements')
-    cookedSoup = ingredients[1]
-    print(cookedSoup)
-    prompt += cookedSoup
+    prompt += rawSoup
 
 #prompt
     response = openai.Completion.create(
@@ -51,5 +49,9 @@ for link in links:
     )
 
     event_string = response['choices'][0]['text']
-    print(event_string)
+    results.append(event_string)
+
+with open("finalSMS.txt", "w") as f:
+    for result in results:
+        f.write(result)
 
