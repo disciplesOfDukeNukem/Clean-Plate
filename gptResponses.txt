@@ -24,3 +24,25 @@ Dates and DeadlinesDo you LOVE Lego & Maps? Win a chance to create a lego map!Sk
 Campus AnnouncementsCareer Center Changes - Happy Retirement Debbie BehnfieldWelcome new Career Center Associate Director Rebecca Martinez and Happy Retirement Debbie Behnfield!
 Faculty Resource: The Online Technical Communication Center
 Planning Spring classes? The OTCC has resources on many communications topics with explanatory videos, handouts & exercises.Only
+
+Prompt:
+"Name all of the events with free food, drinks, breakfast, lunch, or dinner in the following email. Only list the name of the event and nothing else: "
+
+ChatGPT:
+
+Here are the events in the email that have free food, drinks, breakfast, lunch, or dinner:
+
+Free Coffee in Appreciation of your Service
+Good Vibe Food Drive Final Days!
+Tomorrow: Astronomy Club Black Hole Bingo and Trivia Night
+Hybrid - Shifts in Energy Geopolitics – Clean Energy - today
+Hydration Station Tailgate - all are welcome!
+11/17 Lunch Bunch: Learn about Mines' UG Research Scholars
+December Grads: Interested in joining Order of the Engineer?
+Teach@Mines Study! (faculty, Admins, Advisors only)
+
+API:
+Free Coffee in Appreciation of your Service
+Tomorrow: Astronomy Club Black Hole Bingo and Trivia Night
+Hybrid - Shifts in Energy Geopolitics – Clean Energy - today
+Hydration Station Tailgate - all are welcome!

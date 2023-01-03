@@ -28,6 +28,8 @@ for event in events:
     if event in link_dict:
         cleanLinks.append(link_dict[event])
 
-print(cleanLinks)
+with open("cleanLinks.csv", 'w') as cl:
+    for link in cleanLinks:
+        cl.write(link + "\n")
     
 
