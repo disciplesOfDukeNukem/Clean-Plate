@@ -19,7 +19,7 @@ sms = sms.replace("[", "")
 sms = sms.replace("]", "")
 
 client = Client(account_sid, auth_token)
-numbers = ["720 383 3726", "719 985 5619", "970 978 7468"]
+numbers = ["720 383 3726", "719 985 5619"]
 
 for number in numbers:
   message = client.messages.create(
