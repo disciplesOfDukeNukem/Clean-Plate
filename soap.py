@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-import csv
 
 def parse_blast(raw_blast):
 
@@ -10,17 +9,13 @@ def parse_blast(raw_blast):
 
     a_tags = soup.find_all("a")
 
-    with open("rawLinks.csv", "w", encoding="utf-8") as l:
-        writer = csv.writer(l)
+    link_dict = {}
 
-        csv_headers = ["header", "link"]
-        writer.writerow(csv_headers)
-
-        for atag in a_tags:
-            link = atag.get("href")
-            text = atag.text
-            if link and text:
-                writer.writerow([text, link])
+    for atag in a_tags:
+        link = atag.get("href")
+        text = atag.text
+        if link and text:
+            link_dict[text] = link
 
     rawSoup = soup.get_text()
     ingredients = rawSoup.split('Maximum number of entries to return. If blank, no limit on number:\n\n\n\n\n\n')
@@ -30,10 +25,8 @@ def parse_blast(raw_blast):
     # Get the first 500 words
     halfSoup = words[:500]
     # Join the first 2000 words back into a single string
-    cookedSoup = ' '.join(halfSoup)
+    cleaned_blast = ' '.join(halfSoup)
 
-    print(cookedSoup)
+    return link_dict, cleaned_blast
 
-    with open("cleanBlast.txt", 'w', encoding="utf-8") as cleanBlast:
-        cleanBlast.write(cookedSoup)
 

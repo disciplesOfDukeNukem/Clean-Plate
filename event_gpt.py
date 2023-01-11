@@ -40,6 +40,6 @@ def get_sms(clean_links):
         event_string = response['choices'][0]['text']
         results.append(event_string)
 
-        sms = "\n".join(results)
-        return sms
+    sms = "\n".join(results)
+    return sms
 
