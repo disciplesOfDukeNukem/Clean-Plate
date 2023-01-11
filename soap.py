@@ -1,48 +1,39 @@
-#This file will parse the rawBlast and return the text
-
 from bs4 import BeautifulSoup
 import csv
 
-#opening the rawBlast
-with open("rawBlast.txt", 'r', encoding="utf-8") as f:
-    #saves it as raw_blast
-    raw_blast = f.read()
+def parse_blast(raw_blast):
 
-#print(raw_blast)
+    soup = BeautifulSoup(raw_blast, 'html.parser')
 
-soup = BeautifulSoup(raw_blast, 'html.parser')
+    # extract all the links
+    links = soup.find_all('a')
 
-# extract all the links
-links = soup.find_all('a')
+    a_tags = soup.find_all("a")
 
-# loop through the links and print the text and href attributes
+    with open("rawLinks.csv", "w", encoding="utf-8") as l:
+        writer = csv.writer(l)
 
+        csv_headers = ["header", "link"]
+        writer.writerow(csv_headers)
 
-a_tags = soup.find_all("a")
+        for atag in a_tags:
+            link = atag.get("href")
+            text = atag.text
+            if link and text:
+                writer.writerow([text, link])
 
-with open("rawLinks.csv", "w", encoding="utf-8") as l:
-    writer = csv.writer(l)
-    
-    csv_headers = ["header", "link"]
-    writer.writerow(csv_headers)
-    
-    for atag in a_tags:
-        link = atag.get("href")
-        text = atag.text
-        if link and text:
-            writer.writerow([text, link])
+    rawSoup = soup.get_text()
+    ingredients = rawSoup.split('Maximum number of entries to return. If blank, no limit on number:\n\n\n\n\n\n')
+    cookedSoup = ingredients[1]
+    # Split the text into a list of words
+    words = cookedSoup.split()
+    # Get the first 500 words
+    halfSoup = words[:500]
+    # Join the first 2000 words back into a single string
+    cookedSoup = ' '.join(halfSoup)
 
-rawSoup = soup.get_text()
-ingredients = rawSoup.split('Maximum number of entries to return. If blank, no limit on number:\n\n\n\n\n\n')
-cookedSoup = ingredients[1]
-# Split the text into a list of words
-words = cookedSoup.split()
-# Get the first 500 words
-halfSoup = words[:500]
-# Join the first 2000 words back into a single string
-cookedSoup = ' '.join(halfSoup)
+    print(cookedSoup)
 
-print(cookedSoup)
+    with open("cleanBlast.txt", 'w', encoding="utf-8") as cleanBlast:
+        cleanBlast.write(cookedSoup)
 
-with open("cleanBlast.txt", 'w', encoding="utf-8") as rawBlast:
-    rawBlast.write(cookedSoup)
