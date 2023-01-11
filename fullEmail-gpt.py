@@ -3,8 +3,8 @@ import openai
 openai.api_key = "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"
 
 #TODO change to cleanBlast.txt when finished testing
-read_path = "sampleDailyBlast-11-10-22.txt"
-#read_path = "cleanBlast.txt"
+#read_path = "sampleDailyBlast-11-10-22.txt"
+read_path = "cleanBlast.txt"
 
 blastPrompt = ""
 #reading in and setting the blastPrompt
@@ -12,7 +12,7 @@ with open(read_path, "r", encoding="utf-8") as f:
     # Read the contents of the file as a string
     blastPrompt = f.read()
 
-initialPrompt = "Name all of the events with free food, drinks, breakfast, lunch, or dinner in the following email. Only list the name of the event and nothing else: "
+initialPrompt = "Name all of the events with free food, drinks, breakfast, lunch, or dinner in the following email. Only list the name of the event and nothing else. Write the characters ##### between each event: "
 #initialPrompt = "Name and condense the first 8 events in the following email in an ordered list in the format of 1)[event1],2)[event2],...: "
 final_prompt = initialPrompt + blastPrompt
 
@@ -38,7 +38,6 @@ response = openai.Completion.create(
 event_string = response['choices'][0]['text']
 print(event_string)
 
-#event_list = event_string.split("], [")
-#for event in event_list:
-#    print(event+"\n\n")
+with open('events.txt', 'w') as file:
+    file.writelines(event_string)
 

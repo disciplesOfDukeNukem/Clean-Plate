@@ -10,9 +10,9 @@ scaleSerpKey = "54737D4576E3465B9A02285845AD6587"
 
 links = []
 results = []
-prompt = "Name the type of food, drink, breakfast, lunch or dinner in the following event, as well as where and when it is. Use this format [event name, time and date, location, type of food/drink] "
+prompt = "Name the type of food, drink, breakfast, lunch or dinner in the following event, as well as where and when it is. Use this format [event name, time, date, location, type of food/drink] "
 
-readpath = "sampleCleanLinks.csv"
+readpath = "cleanLinks.csv"
 
 with open(readpath, "r") as cl:
     for line in cl:

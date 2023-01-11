@@ -37,12 +37,12 @@ ingredients = rawSoup.split('Maximum number of entries to return. If blank, no l
 cookedSoup = ingredients[1]
 # Split the text into a list of words
 words = cookedSoup.split()
-# Get the first 2000 words
-halfSoup = words[:2000]
+# Get the first 500 words
+halfSoup = words[:500]
 # Join the first 2000 words back into a single string
 cookedSoup = ' '.join(halfSoup)
 
 print(cookedSoup)
 
-with open("cleanBlast.txt", 'w') as rawBlast:
+with open("cleanBlast.txt", 'w', encoding="utf-8") as rawBlast:
     rawBlast.write(cookedSoup)

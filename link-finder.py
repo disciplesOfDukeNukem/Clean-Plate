@@ -16,10 +16,8 @@ with open("rawLinks.csv") as csv_file:
             link_dict[row[0]] = row[1]
 
 #print(link_dict)
-with open("sampleEvents.txt", "r", encoding = "utf-8") as e:
-    events = []
-    for line in e:
-        events.append(line.strip())
+with open("events.txt", "r", encoding = "utf-8") as e:
+    events = e.read().split("#####")
 
 #print(events)
 
