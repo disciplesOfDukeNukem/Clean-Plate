@@ -13,16 +13,18 @@ rawLinks, cleanBlast = parse_blast(rawBlastHtml)
 #for key, value in rawLinks.items():
 #    print(key, value)
 #seems to properly generate up to here
-events = fullEmail_gpt_request(cleanBlast)
-print(events)
+#events, shallowEvents = fullEmail_gpt_request(cleanBlast)
+events= fullEmail_gpt_request(cleanBlast)
+#print(events)
 cleanLinks = get_clean_links(rawLinks,events)
 
 #for link in cleanLinks:
 #    print(link)
 #print("cleanLinks: \n\n")
-#for link in cleanLinks:
-#    print(link)
+for link in cleanLinks:
+    print(link)
 
+#sms = get_sms(cleanLinks, shallowEvents)
 sms = get_sms(cleanLinks)
 print(sms)
 send_sms(sms)
