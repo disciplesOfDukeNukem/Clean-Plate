@@ -9,11 +9,8 @@ rawBlastHtml = perform_search()
 rawLinks, cleanBlast = parse_blast(rawBlastHtml)
 
 #RUN THIS SECTION 3 TIMES
-fullRequest = fullEmail_gpt_request(cleanBlast)
-events = fullRequest[0]
-shallowEvents = fullRequest[1]
-print(f"Shallow events:{shallowEvents}")
-cleanLinks = get_clean_links(rawLinks,events)
+deepEvents = fullEmail_gpt_request(cleanBlast)
+cleanLinks = get_clean_links(rawLinks,deepEvents)
 
 for link in cleanLinks:
     print(link)

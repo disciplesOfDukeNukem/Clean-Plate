@@ -44,23 +44,12 @@ def get_sms(clean_links):
 
         event_string = response['choices'][0]['text']
         results.append(event_string)
-    """
-    #adding the shallow search of the email to the deep search
-    results.append(shallowEvents)
-    #removing duplicates
-    prompt = "Remove any duplicates from the following list and return the list again. Include a newline between each result. Keep eveything in this format [event name, time, date, location, type of food/drink]: " + "\n".join(results)
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=prompt,
-        temperature=0.7,
-        max_tokens=256,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0
-        )
-    
-    sms = response['choices'][0]['text']
-"""
+
+    with open("rawEvents.txt", "a") as rE:
+        for result in results:
+            rE.write(result + "DEEP EVENT" +  "\n")
+
+
     sms = "\n".join(results)
     return sms
 
