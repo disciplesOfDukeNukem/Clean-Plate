@@ -22,9 +22,9 @@ def parse_blast(raw_blast):
     cookedSoup = ingredients[1]
     # Split the text into a list of words
     words = cookedSoup.split()
-    # Get the first 500 words
-    halfSoup = words[:500]
-    # Join the first 2000 words back into a single string
+    # Get the first 1000 words
+    halfSoup = words[:1000]
+    # Join the first 1000 words back into a single string
     cleaned_blast = ' '.join(halfSoup)
 
     return link_dict, cleaned_blast

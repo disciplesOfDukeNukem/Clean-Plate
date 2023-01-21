@@ -6,27 +6,22 @@ from event_gpt import get_sms
 from send_sms import send_sms
 
 rawBlastHtml = perform_search()
-#print(rawBlastHtml)
 rawLinks, cleanBlast = parse_blast(rawBlastHtml)
-#print(cleanBlast)
 
-#for key, value in rawLinks.items():
-#    print(key, value)
-#seems to properly generate up to here
-#events, shallowEvents = fullEmail_gpt_request(cleanBlast)
-events= fullEmail_gpt_request(cleanBlast)
-#print(events)
+#RUN THIS SECTION 3 TIMES
+fullRequest = fullEmail_gpt_request(cleanBlast)
+events = fullRequest[0]
+shallowEvents = fullRequest[1]
+print(f"Shallow events:{shallowEvents}")
 cleanLinks = get_clean_links(rawLinks,events)
 
-#for link in cleanLinks:
-#    print(link)
-#print("cleanLinks: \n\n")
 for link in cleanLinks:
     print(link)
 
-#sms = get_sms(cleanLinks, shallowEvents)
 sms = get_sms(cleanLinks)
-print(sms)
+#print(sms)
+
+
 send_sms(sms)
 
 
