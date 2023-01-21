@@ -17,6 +17,7 @@ def parse_blast(raw_blast):
         if link and text:
             link_dict[text] = link
 
+    print(link_dict)
     rawSoup = soup.get_text()
     ingredients = rawSoup.split('Maximum number of entries to return. If blank, no limit on number:\n\n\n\n\n\n')
     cookedSoup = ingredients[1]

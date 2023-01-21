@@ -6,6 +6,7 @@ def get_clean_links(rawLinkDict, event_string):
 
     #checking each event
     for event in events:
+        print(event)
         if event in rawLinkDict:
             cleanLinks.append(rawLinkDict[event])
 

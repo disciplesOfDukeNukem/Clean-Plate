@@ -3,7 +3,7 @@ import openai
 def fullEmail_gpt_request(clean_blast):
     openai.api_key = "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"
 
-    initialPrompt = "Name all of the events with free food, drinks, breakfast, lunch, or dinner in the following email. Only list the name of the event and nothing else. Write the characters ##### between each event. Only include events with free food, drinks, breakfast, lunch, or dinner: "
+    initialPrompt = "Name and only include the events with free food, drinks, breakfast, lunch, or dinner in the following email. Only list the name of the event and nothing else. Write the characters ##### between each event:"
     final_prompt = initialPrompt + clean_blast
 
     response = openai.Completion.create(
@@ -17,10 +17,11 @@ def fullEmail_gpt_request(clean_blast):
     )
 
     event_string = response['choices'][0]['text']
-    
+    #print(event_string)
+
     secondPrompt = "Name the events with free food or drinks in the following email. Use this format [event name, time, date, location, type of food/drink]. Separate each event by '####'"
     final_prompt = secondPrompt + clean_blast
-    print(f"final_prompt: {final_prompt}")
+   
 
     with open("rawEvents.txt", "a") as file:
     # Get the events with free food/drink from the API
