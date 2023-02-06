@@ -5,7 +5,7 @@ openai.api_key = "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"
 scaleSerpKey = "54737D4576E3465B9A02285845AD6587"
 
 #def get_sms(clean_links, shallowEvents):
-def get_sms(clean_links):
+def get_deep_events(clean_links):
     results = []
     prompt = "Name the type of food, drink, breakfast, lunch or dinner in the following event, as well as where and when it is. Use this format [event name, time, date, location, type of food/drink] "
 
@@ -47,9 +47,8 @@ def get_sms(clean_links):
 
     with open("rawEvents.txt", "a") as rE:
         for result in results:
-            rE.write(result + "DEEP EVENT" +  "\n")
+            rE.write(result + "\n")
 
 
-    sms = "\n".join(results)
-    return sms
+    
 
