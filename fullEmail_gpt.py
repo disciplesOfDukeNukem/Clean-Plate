@@ -43,7 +43,7 @@ def fullEmail_gpt_request(clean_blast):
         for event in rawShallowEvents:
             # Write the events to the txt file
             if "location tbd" not in event.lower() and "N/A" not in event and "No" not in event:
-                file.write(event + "SHALLOW EVENT" +"\n")
+                file.write(event +"\n")
 
     
     return event_string
