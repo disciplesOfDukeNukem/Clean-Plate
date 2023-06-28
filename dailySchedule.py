@@ -5,12 +5,12 @@ import time
 
 
 # Your Account SID from twilio.com/console
-account_sid = "AC54b1eccfa25ab3d29ea309bbc9c50448"
+account_sid = "INSERT_ACCOUNT_SID"
 # Your Auth Token from twilio.com/console
-auth_token  = "ebc4de3f9adf4794efe5722c8f7ea977"
+auth_token  = "INSERT_AUTH_TOKEN"
 
 client = Client(account_sid, auth_token)
-numbers = ["720 383 3726", "719 985 5619"]
+numbers = ["INSERT_PHONE_NUMBER", "INSERT_PHONE_NUMBER"]
 
 now = datetime.now()
 
