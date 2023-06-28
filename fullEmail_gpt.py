@@ -1,7 +1,7 @@
 import openai
 
 def fullEmail_gpt_request(clean_blast):
-    openai.api_key = "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"
+    openai.api_key = "INSERT_API_KEY"
 
     initialPrompt = "Name and only include the events with free food, drinks, breakfast, lunch, or dinner in the following email. Only list the name of the event and nothing else. Write the characters ##### between each event:"
     final_prompt = initialPrompt + clean_blast
