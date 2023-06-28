@@ -23,7 +23,7 @@ def show_name():
     for number in numbers:
         message = client.messages.create(
         to=number,
-        from_="+13148873334",
+        from_="INSERT_PHONE_NUMBER",
         body="WTF I can't get the daily scheduling to work! It's just like one line of code.")
         print(message.sid)
     print("This is working on a 1 min schedule")
