@@ -15,7 +15,7 @@ def send_sms(sms):
     for number in numbers:
         message = client.messages.create(
             to=number,
-            from_="+13148873334",
+            from_="INSERT_PHONE_NUMBER",
             body=sms_body)
         print(message.sid)
 
