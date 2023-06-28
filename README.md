@@ -25,6 +25,7 @@ A diagram of the architecture can be found in cleanPlate.png
 
  ## Learned Technologies
  This project was developed to refresh and learn the following new technologies:
+  - Python
   - Google Cloud Platform (GCP)
   - WebScraping
   - API calls
