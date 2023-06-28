@@ -9,14 +9,14 @@ from bs4 import BeautifulSoup
 #main which runs the whole program
 def main():
     sponge()
-    print("Clean Plate Bitches")
+    print("Clean Plate")
 
 
-#scrapes the daily blast website to get the RawDawg html
+#scrapes the daily blast website to get the Raw html
 def sponge():
     # set up the request parameters
     params = {
-    'api_key': '54737D4576E3465B9A02285845AD6587',
+    'api_key': 'INSERT_API_KEY',
     'q': 'pizza',
     'include_html': 'true',
     'output': 'html'
