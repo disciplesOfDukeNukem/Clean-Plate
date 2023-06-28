@@ -1,10 +1,10 @@
 from twilio.rest import Client
 
 def send_sms(sms):
-    account_sid = "AC54b1eccfa25ab3d29ea309bbc9c50448"
-    auth_token = "ebc4de3f9adf4794efe5722c8f7ea977"
+    account_sid = "INSERT_ACCOUNT_SID"
+    auth_token = "INSERT_AUTH_TOKEN"
     client = Client(account_sid, auth_token)
-    numbers = ["720 383 3726", "719 985 5619"]
+    numbers = ["INSERT_PHONE_NUMBER", "INSERT_PHONE_NUMBER"]
 
     sms_body = []
     for line in sms.splitlines():
