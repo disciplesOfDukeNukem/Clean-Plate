@@ -1,8 +1,8 @@
 import openai
 import requests
 from bs4 import BeautifulSoup
-openai.api_key = "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"
-scaleSerpKey = "54737D4576E3465B9A02285845AD6587"
+openai.api_key = "INSERT_API_KEY"
+scaleSerpKey = "INSERT_API_KEY"
 
 #def get_sms(clean_links, shallowEvents):
 def get_deep_events(clean_links):
