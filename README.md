@@ -3,6 +3,9 @@
 ## Purpose:
 The purpose of this project is to create a service to send daily text messages of free food events on campus
 
+## Example: 
+![image](https://github.com/disciplesOfDukeNukem/Clean-Plate/assets/98796321/aa228538-8d3a-4022-87cc-74a32b87c63e)
+
 ## Background:
 Mines students receive a daily newsletter email, called "The Daily Blast". Many events offer free food, however, the email is quite long and is rarely fully read by students. We decided to leverage the OpenAI API in order to summarize this email, and send us a text about which events have free food.
 
