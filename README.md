@@ -1,38 +1,39 @@
-# Clean-Plate
+# Clean-Plate 🍽️
 
-## Purpose:
-The purpose of this project is to create a service to send daily text messages of free food events on campus
+## Purpose 🎯
+The goal of this project is to create a service that sends daily text messages about free food events on campus.
 
-## Example: 
+## Example 📸
 ![image](https://github.com/disciplesOfDukeNukem/Clean-Plate/assets/98796321/aa228538-8d3a-4022-87cc-74a32b87c63e)
 
-## Background:
-Mines students receive a daily newsletter email, called "The Daily Blast". Many events offer free food, however, the email is quite long and is rarely fully read by students. We decided to leverage the OpenAI API in order to summarize this email, and send us a text about which events have free food.
+## Background 📚
+Students at Mines receive a daily newsletter called "The Daily Blast". Many events offering free food are included, but the lengthy email is rarely read in its entirety by students. To address this, we leveraged the OpenAI API to summarize the email and send a text message highlighting events with free food.
 
-## Architecture:
+## Architecture 🏗️
 ![image](https://github.com/disciplesOfDukeNukem/Clean-Plate/assets/98796321/22a5fb62-640a-49f6-a5fb-ec1aeab2d33a)
 
-A diagram of the architecture can be found in cleanPlate.png
- - Pub/Sub: A daily timer using GCP fires at 7:00 am, launching the process on a Linux virtual machine
- - Sponge: An API call is made to ScaleSerp to scrape the Daily Blast. This returns a raw HTML, which is stored in rawBlast.txt
- - Soap: BeatifulSoup is used to parse the HTML. This outputs two files, the text extracted from the email ("cleanBlast.txt") and a log of all links from the email ("rawLinks.txt")
- - fullEmail-gpt: Reads in the cleanBlast, and asks GPT-3 which events have free food. These events are saved in events.txt
- - link-finder: Matches the events that have free food to the links that match the events. The links to events are saved in cleanLinks.txt
- - event-gpt: For every event, another OpenAI call is made, asking for the time, date, and location of each event. These descriptions are all saved into finalSMS.txt
- - twilio: Uses the twilio API to send out the finalSMS to our phone numbers
+A diagram of the architecture can be found in cleanPlate.png.
 
- These components were developed as separate files, but eventually saved into functions that are called in one script.
+1. **Pub/Sub**: A daily timer using GCP triggers at 7:00 am, initiating the process on a Linux virtual machine.
+2. **Sponge**: An API call is made to ScaleSerp to scrape the Daily Blast. The raw HTML is stored in `rawBlast.txt`.
+3. **Soap**: BeautifulSoup is used to parse the HTML. The extracted text is saved in `cleanBlast.txt`, and a log of all links is saved in `rawLinks.txt`.
+4. **fullEmail-gpt**: The script reads `cleanBlast.txt` and asks GPT-3 which events offer free food. These events are saved in `events.txt`.
+5. **link-finder**: Matches events with free food to their corresponding links. The event links are saved in `cleanLinks.txt`.
+6. **event-gpt**: For each event, another OpenAI call is made to obtain the time, date, and location. These details are saved in `finalSMS.txt`.
+7. **twilio**: Uses the Twilio API to send the final SMS to our phone numbers.
 
- ## Outcome:
- This program saved us an estimated $200 in food savings. Eventually, the project fizzled out due to inconsitent results from the OpenAI calls, and running out of API credits.
+These components were initially developed as separate files but were eventually consolidated into functions within a single script.
 
- ## Learned Technologies
- This project was developed to refresh and learn the following new technologies:
-  - Python
-  - Google Cloud Platform (GCP)
-  - WebScraping
-  - API calls
-  - HTML parsing using BeautifulSoup
-  - Prompt Engineering
+## Outcome 🎉
+This program saved us an estimated $200 in food costs. However, the project eventually fizzled out due to inconsistent results from the OpenAI calls and depletion of API credits.
 
-GCP had a much steeper learning curve than expected. Porter spent most of his time on GCP, while Zach contributed to most of the smaller components and architecture.
+## Learned Technologies 💡
+This project was developed to refresh and learn the following technologies:
+- Python
+- Google Cloud Platform (GCP)
+- Web Scraping
+- API calls
+- HTML parsing with BeautifulSoup
+- Prompt Engineering
+
+GCP had a steeper learning curve than expected. Porter focused on GCP, while Zach contributed to most of the smaller components and the overall architecture.
